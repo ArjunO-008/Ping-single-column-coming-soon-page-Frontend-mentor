@@ -1,0 +1,208 @@
+@import url('https://fonts.google.com/specimen/Libre+Franklin');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', Arial;
+}
+
+:root {
+    --Blue: hsl(223, 87%, 63%);
+    --PaleBlue: hsl(223, 100%, 88%);
+    --LightRed: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --VeryDarkBlue: hsl(209, 33%, 12%);
+}
+body{
+    background-color: #fff;    
+}
+
+main{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+.logo{
+    margin-bottom: 25px;
+}
+h1{
+    color: var(--Gray);
+    font-weight: 300;    
+    font-size: 1.9em;
+}
+h1::after{
+    content: 'soon!';
+    font-weight: 700;
+    color: var(--VeryDarkBlue);
+}
+h3{
+    margin: 10px;
+    font-weight: 400;
+    color: var(--VeryDarkBlue);
+}
+
+form{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+form div input{
+    width: 400px;
+    height: 40px;
+    padding: 4%;
+    border-radius: 25px;
+    border: none;
+    outline: 1px solid var(--Gray);    
+}
+form div label{
+    color: var(--LightRed);   
+    margin-left: 10px;
+    font-size: 0.8em ;
+    font-style: italic;
+}
+form button{
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--Blue);
+    color: #fff;
+    font-weight: 300;
+    padding: 1%;
+    box-shadow: 0 6px 28px -7px var(--PaleBlue);
+    cursor: pointer;
+    transition: all 0.1s;
+}
+form button:hover{   
+    box-shadow: 0 6px 28px 2px var(--PaleBlue);   
+}
+.illustrator{
+    width: 55vw;
+    height: 80vh;
+    margin: 25px;
+}
+.footer{
+    color: var(--Gray);
+    font-weight: 400;
+    margin-top: 20px;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+.icons span{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    outline: 1px solid var(--Gray);   
+    cursor: pointer;
+}
+
+.icons span:nth-child(1) svg{
+    width: 100%;
+    height: 100%;
+    border-radius:50% ;      
+    transition: all 0.2s;
+}
+.icons span:nth-child(1) rect{    
+    border-radius: 100%;
+    fill: var(--Blue);    
+}
+.icons span:nth-child(1) path{   
+    fill: #fff; 
+    border-radius: 50%;
+}
+.icons span:nth-child(1):hover rect {
+    fill: #fff;       
+}
+.icons span:nth-child(1):hover path{
+    fill: var(--Blue);       
+}
+.icons span svg{
+    fill: var(--Blue);
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.icons span svg:hover{
+    fill: #fff;
+    background-color: var(--Blue);
+}
+
+
+
+@media only screen and (max-width: 768px){
+    
+.illustrator{
+    width: 55vw;
+    height: 60vh;   
+}
+
+}
+
+@media only screen and (max-width: 768px){
+    
+.illustrator{
+    width: 55vw;
+    height: 60vh;   
+}
+
+form div input{
+    width: 300px;
+    height: 40px;     
+}
+form button{
+    width: 100px;
+    height: 40px;
+}
+
+}
+
+@media only screen and (max-width: 375px){
+    
+.illustrator{
+    width: 90%;
+    height: 50vh;   
+}
+h1{
+    text-align: center;
+}
+
+form {    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+form div{      
+    align-items: center;
+    gap: 10px;
+}
+
+form div input{
+    width: 300px;
+    height: 40px;     
+}
+form button{
+    width: 300px;
+    height: 40px;
+}
+
+}
